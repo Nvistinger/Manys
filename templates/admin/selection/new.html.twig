@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Ajouter une nouvelle sélection</h1>
+        {{ include ('admin/selection/_form.html.twig', {button: 'Ajouter'}) }}
+    </div>
+{% endblock %}

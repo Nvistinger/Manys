@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Gestion des sélections' %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Gérer les sélections</h1>
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for selection in selections %}
+                <tr>
+                    <td>{{ selection.name }}</td>
+                    <td>
+                        <a href="{{ path('admin.selection.edit', {id: selection.id}) }}" class="btn btn-secondary">Editer</a>
+                        <form method="post" action="{{ path('admin.selection.delete', {id: selection.id}) }}" style="display: inline-block" onsubmit="return confirm('Etes vous sûr de vouloir supprimer ce bien?')">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ selection.id) }}">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+             {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-right">
+            <a href="{{ path('admin.selection.new') }}" class="btn btn-primary">Ajouter une nouvelle sélection</a>
+        </div>
+    </div>
+{% endblock %}
