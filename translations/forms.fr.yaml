@@ -1,5 +1,4 @@
 #Carte d'un bien
-
 Title: Titre
 Price: Prix
 Rooms: Pièces
@@ -12,7 +11,6 @@ Postal code: Code postal
 Sold: Vendu
 
 #Formulaire de contact
-
 Firstname: Prénom
 Lastname: Nom
 Phone: Téléphone

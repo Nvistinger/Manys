@@ -89,7 +89,6 @@ class  PropertyController extends AbstractController {
             'property' => $property,
             'current_menu' => 'properties',
             'form' => $form->createView()
-		]);
-
+        ]);
 	}
 }
