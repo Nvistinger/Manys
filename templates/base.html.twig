@@ -19,9 +19,6 @@
                     <li class="nav-item">
                         <a class="nav-link {% if current_menu is defined and current_menu == 'properties' %}active{% endif %}" href="{{ path('property.index') }}">Nos biens</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {% if current_menu is defined and current_menu == 'contact' %}active{% endif %}" href="{{ path('contact.index') }}">Contact</a>
-                    </li>
                 </ul>
                 {% if app.user %}
                     <ul class="navbar-nav">

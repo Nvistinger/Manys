@@ -3,7 +3,6 @@
 phpunit.xml.dist
 /public/images
 /src/DataFixtures/UserFixtures.php
-/src/Migrations
 /tests
 
 ###> symfony/framework-bundle ###
