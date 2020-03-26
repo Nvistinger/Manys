@@ -6,7 +6,17 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+import $ from 'jquery';
 import '../css/app.css';
+require('select2');
+
+$('select').select2();
+let $contactButton = $('#contactButton');
+$contactButton.click(e => {
+    e.preventDefault();
+    $('#contactForm').slideDown();
+    $contactButton.slideUp();
+});
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';

@@ -1,4 +1,5 @@
 .idea/
+/assets/css
 /bin
 phpunit.xml.dist
 /public/images
