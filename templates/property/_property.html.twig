@@ -1,8 +1,8 @@
 <div class="card mb-4 text-center">
-    {% if property.filename %}
-        <img class="card-img-top" src="{{ vich_uploader_asset(property, 'imageFile') | imagine_filter('thumb')}}" alt="Image du bien" style="width: 100%; height: auto;">
+    {% if property.picture %}
+        <img class="card-img-top" src="{{ vich_uploader_asset(property.picture, 'imageFile') | imagine_filter('thumb')}}" alt="Image du bien" style="width: 100%; height: auto;">
     {% else %}
-        <img class="card-img-top" src="{{ '/images/properties/empty.jpg' | imagine_filter('thumb')}}" alt="Image du bien" style="width: 100%; height: auto;">
+        <img class="card-img-top" src="{{ '/images/empty.jpg' | imagine_filter('thumb')}}" alt="Image du bien" style="width: 100%; height: auto;">
     {% endif %}
     <div class="card-body">
         <h2 class="card-title">

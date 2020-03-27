@@ -2,7 +2,6 @@
 /assets/css
 /bin
 phpunit.xml.dist
-/public/images
 /src/DataFixtures/UserFixtures.php
 /tests
 
