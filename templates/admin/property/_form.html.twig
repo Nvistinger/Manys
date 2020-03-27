@@ -11,11 +11,6 @@
     <div class="col-md-3">{{ form_row(form.floor) }}</div>
 </div>
 <div class="row">
-    <div class="col-md-6">{{ form_row(form.address) }}</div>
-    <div class="col-md-3">{{ form_row(form.city) }}</div>
-    <div class="col-md-3">{{ form_row(form.postal_code) }}</div>
-</div>
-<div class="row">
     <div class="col">{{ form_row(form.pictureFiles) }}</div>
 </div>
 <div class="row flex">
@@ -27,8 +22,18 @@
     {% endfor %}
 </div>
 <div class="row mt-2">
+    <div class="col">{{ form_row(form.description) }}</div>
+</div>
+<div class="row">
+    <div class="col-md-7">{{ form_row(form.address) }}</div>
+    <div class="col-md-3">{{ form_row(form.city) }}</div>
+    <div class="col-md-2">{{ form_row(form.postal_code) }}</div>
+</div>
+<div class="row">
+    <div class="col">{{ form_row(form.selections) }}</div>
+</div>
+<div class="row">
     <div class="col-md-auto mt-auto">{{ form_row(form.sold) }}</div>
 </div>
-{{ form_rest(form) }}
 <button class="btn btn-primary">{{ button|default('Enregistrer') }}</button>
 {{ form_end(form) }}

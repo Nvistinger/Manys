@@ -5,9 +5,13 @@ Rooms: Pièces
 Bedrooms: Chambres
 Heat: Chauffage
 Floor: Etage
+Picture files: Photos
 Address: Adresse
 City: Ville
 Postal code: Code postal
+Lat: Latitude
+Lng: Longitude
+Selections: Specificités
 Sold: Vendu
 
 #Formulaire de contact
