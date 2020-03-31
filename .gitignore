@@ -1,10 +1,6 @@
 .idea/
-/assets/css
-/bin
-phpunit.xml.dist
 /public/images/properties
 /src/DataFixtures/UserFixtures.php
-/tests
 
 ###> symfony/framework-bundle ###
 /.env.local
