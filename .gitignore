@@ -1,6 +1,4 @@
 .idea/
-/public/images/properties
-/src/DataFixtures/UserFixtures.php
 
 ###> symfony/framework-bundle ###
 /.env.local
