@@ -1,5 +1,11 @@
 liip_imagine:
     filter_sets:
+        logo:
+            quality: 75
+            filters:
+                thumbnail:
+                    size: [150, 150]
+                    mode: outbound
         thumb:
             quality: 75
             filters:
