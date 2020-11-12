@@ -1,6 +1,6 @@
 # Manys
 
-![Alt Text](https://lmpwybb.alwaysdata.net/pictures/manys.png)
+![Logo Manys](https://lmpwybb.alwaysdata.net/pictures/manys.png)
 
 ## Real estate agency
 
