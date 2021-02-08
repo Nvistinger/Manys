@@ -1,5 +1,5 @@
 .idea/
-deploy
+/public/images/properties/
 
 ###> symfony/framework-bundle ###
 /.env.local
