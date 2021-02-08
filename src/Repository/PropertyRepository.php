@@ -5,9 +5,9 @@ namespace App\Repository;
 use App\Entity\Property;
 use App\Entity\PropertySearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
 use Doctrine\ORM\Query;
 use Doctrine\ORM\QueryBuilder;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method Property|null find($id, $lockMode = null, $lockVersion = null)
