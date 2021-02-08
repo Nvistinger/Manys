@@ -23,7 +23,7 @@ class AdminSelectionController extends AbstractController
     public function index(SelectionRepository $selectionRepository): Response
     {
         return $this->render('admin/selection/index.html.twig', [
-	        'current_menu' => 'selection',
+            'current_menu' => 'selection',
             'selections' => $selectionRepository->findAll(),
         ]);
     }

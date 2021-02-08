@@ -4,7 +4,7 @@
 
 ## Real estate agency
 
-Here you will find a Project made entirely with **Symfony**, **Node.js** and **dependencies** like:
+Here you will find a Project made entirely with **Symfony**, **Bootstrap**, **Node.js** and **dependencies** like:
 
 - Knp Paginator
 - Encore
