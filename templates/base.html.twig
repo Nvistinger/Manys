@@ -11,8 +11,8 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <img class="float-left" src="{{ '/images/logo-manys.png' | imagine_filter('logo')}}" alt="Logo Manys">
-            <a class="navbar-brand" href="{{ path('home') }}">Agence MANYS</a>
+            <img src="{{ '/images/logo-manys.png' | imagine_filter('logo')}}" alt="Logo Manys">
+            <a class="navbar-brand {% if current_menu is defined and current_menu == 'home' %}active{% endif %}" href="{{ path('home') }}">Agence MANYS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,29 +22,18 @@
                         <a class="nav-link {% if current_menu is defined and current_menu == 'properties' %}active{% endif %}" href="{{ path('property.index') }}">Nos biens</a>
                     </li>
                 </ul>
-                {% if not app.user %}
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('admin.property.index') }}">Administration</a>
-                        </li>
-                    </ul>
-                {% else %}
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('admin.property.index') }}">Gérer les biens</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link {% if current_menu is defined and current_menu == 'selection' %}active{% endif %}" href="{{ path('selection.index') }}">Gérer les spécificités</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a href="{{ path('logout') }}" class="nav-link">Se déconnecter</a>
-                        </li>
-                    </ul>
-                {% endif %}
+                <ul class="navbar-nav dropleft">
+                    <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
+                    <div class="dropdown-menu">
+                        {% if not app.user %}
+                            <a class="dropdown-item" href="{{ path('admin.property.index') }}">Se connecter</a>
+                        {% else %}
+                            <a class="dropdown-item {% if current_menu is not defined %}active{% endif %}" href="{{ path('admin.property.index') }}">Gérer les biens</a>
+                            <a class="dropdown-item {% if current_menu is defined and current_menu == 'selection' %}active{% endif %}" href="{{ path('selection.index') }}">Gérer les spécificités</a>
+                            <a class="dropdown-item" href="{{ path('logout') }}">Se déconnecter</a>
+                        {% endif %}
+                    </div>
+                </ul>
             </div>
         </nav>
         {% block body %}{% endblock %}
