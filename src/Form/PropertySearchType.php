@@ -41,6 +41,9 @@ class PropertySearchType extends AbstractType
             ->add('address', null, [
                 'label' => false,
                 'required' => false,
+                'attr' => [
+                    'placeholder' => 'Adresse'
+                ]
             ])
             ->add('distance', ChoiceType::class, [
                 'label' => false,
