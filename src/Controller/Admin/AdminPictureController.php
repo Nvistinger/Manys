@@ -19,7 +19,7 @@ class AdminPictureController extends AbstractController {
      * @param Request $request
      * @return JsonResponse
      */
-    public function delete(Picture $picture, Request $request)
+    public function delete(Picture $picture, Request $request): JsonResponse
     {
         $data = json_decode($request->getContent(), true);
         if ($this->isCsrfTokenValid('delete'.$picture->getId(), $data['_token'])) {

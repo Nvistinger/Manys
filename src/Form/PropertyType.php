@@ -25,18 +25,18 @@ class PropertyType extends AbstractType
             ->add('floor')
             ->add('price')
             ->add('heat', ChoiceType::class, [
-            	'choices' => $this->getChoices()
+                'choices' => $this->getChoices()
             ])
-	        ->add('selections', EntityType::class, [
-	        	'class' => Selection::class,
-		        'required' => false,
-		        'choice_label' => 'name',
-		        'multiple' => true
-	        ])
-	        ->add('pictureFiles', FileType::class, [
+            ->add('selections', EntityType::class, [
+                'class' => Selection::class,
+                'required' => false,
+                'choice_label' => 'name',
+                'multiple' => true
+            ])
+            ->add('pictureFiles', FileType::class, [
                 'required' => false,
                 'multiple' => true
-	        ])
+            ])
             ->add('city')
             ->add('address')
             ->add('postal_code')
@@ -50,17 +50,17 @@ class PropertyType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Property::class,
-	        'translation_domain' => 'forms'
+            'translation_domain' => 'forms'
         ]);
     }
 
-	private function getChoices()
-	{
-		$choices = Property::HEAT;
-		$output = [];
-		foreach ($choices as $k => $v) {
-			$output[$v] = $k;
-		}
-		return $output;
-	}
+    private function getChoices(): array
+    {
+        $choices = Property::HEAT;
+        $output = [];
+        foreach ($choices as $k => $v) {
+            $output[$v] = $k;
+        }
+        return $output;
+    }
 }

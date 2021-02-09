@@ -4,7 +4,6 @@ namespace App\Form;
 
 use App\Entity\PropertySearch;
 use App\Entity\Selection;
-use Doctrine\DBAL\Types\TextType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -19,25 +18,25 @@ class PropertySearchType extends AbstractType
     {
         $builder
             ->add('minSurface', IntegerType::class, [
-            	'required' => false,
-	            'label' => false,
-	            'attr' => [
-	            	'placeholder' => 'Surface minimale'
-	            ]
+                'required' => false,
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Surface minimale'
+                ]
             ])
-		    ->add('maxPrice', IntegerType::class, [
-		        'required' => false,
-		        'label' => false,
-		        'attr' => [
-			        'placeholder' => 'Budget maximal'
-		        ]
-	        ])
+            ->add('maxPrice', IntegerType::class, [
+                'required' => false,
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Budget maximal'
+                ]
+            ])
             ->add('selections', EntityType::class, [
-            	'required' => false,
-	            'label' => false,
-	            'class' => Selection::class,
-	            'choice_label' => 'name',
-	            'multiple' => true
+                'required' => false,
+                'label' => false,
+                'class' => Selection::class,
+                'choice_label' => 'name',
+                'multiple' => true
             ])
             ->add('address', null, [
                 'label' => false,
@@ -61,13 +60,13 @@ class PropertySearchType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => PropertySearch::class,
-	        'method' => 'get',
-	        'csrf_protection' => false
+            'method' => 'get',
+            'csrf_protection' => false
         ]);
     }
 
-    public function getBlockPrefix()
+    public function getBlockPrefix(): string
     {
-	    return '';
+        return '';
     }
 }

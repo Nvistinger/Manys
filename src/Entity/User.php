@@ -11,94 +11,94 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface, Serializable
 {
-	/**
-	 * @ORM\Id()
-	 * @ORM\GeneratedValue()
-	 * @ORM\Column(type="integer")
-	 */
-	private $id;
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
 
-	/**
-	 * @ORM\Column(type="string", length=255)
-	 */
-	private $username;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $username;
 
-	/**
-	 * @ORM\Column(type="string", length=255)
-	 */
-	private $password;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $password;
 
-	public function getId(): ?int
-	{
-		return $this->id;
-	}
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-	public function getUsername(): ?string
-	{
-		return $this->username;
-	}
+    public function getUsername(): ?string
+    {
+        return $this->username;
+    }
 
-	public function setUsername(string $username): self
-	{
-		$this->username = $username;
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	public function getPassword(): ?string
-	{
-		return $this->password;
-	}
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
 
-	public function setPassword(string $password): self
-	{
-		$this->password = $password;
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * @return string[] (Role|string)[]
-	 */
-	public function getRoles()
-	{
-		return['ROLE_ADMIN'];
-	}
+    /**
+     * @return string[] (Role|string)[]
+     */
+    public function getRoles(): array
+    {
+        return['ROLE_ADMIN'];
+    }
 
-	/**
-	 * @return string|null
-	 */
-	public function getSalt()
-	{
-		return null;
-	}
+    /**
+     * @return string|null
+     */
+    public function getSalt(): ?string
+    {
+        return null;
+    }
 
-	public function eraseCredentials()
-	{
-		// TODO: Implement eraseCredentials() method.
-	}
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
 
-	/**
-	 * @return string
-	 */
-	public function serialize()
-	{
-		return serialize([
-			$this->id,
-			$this->username,
-			$this->password
-		]);
-	}
+    /**
+     * @return string
+     */
+    public function serialize(): string
+    {
+        return serialize([
+            $this->id,
+            $this->username,
+            $this->password
+        ]);
+    }
 
-	/**
-	 * @param string $serialized
-	 */
-	public function unserialize($serialized)
-	{
-		list(
-			$this->id,
-			$this->username,
-			$this->password
-			) = unserialize($serialized, ['allowed_classes' => false]);
-	}
+    /**
+     * @param string $serialized
+     */
+    public function unserialize($serialized)
+    {
+        list(
+            $this->id,
+            $this->username,
+            $this->password
+            ) = unserialize($serialized, ['allowed_classes' => false]);
+    }
 }

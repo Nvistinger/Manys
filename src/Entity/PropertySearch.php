@@ -7,20 +7,20 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class PropertySearch {
 
-	/**
-	 * @var int|null
-	 */
+    /**
+     * @var int|null
+     */
     private $maxPrice;
 
-	/**
-	 * @var int|null
-	 * @Assert\Range(min="25", max="200")
-	 */
+    /**
+     * @var int|null
+     * @Assert\Range(min="25", max="200")
+     */
     private $minSurface;
 
-	/**
-	 * @var ArrayCollection
-	 */
+    /**
+     * @var ArrayCollection
+     */
     private $selections;
 
     /**
@@ -45,60 +45,60 @@ class PropertySearch {
 
     public function __construct()
     {
-    	$this->selections = new ArrayCollection();
+        $this->selections = new ArrayCollection();
     }
 
-	/**
-	 * @return int|null
-	 */
-	public function getMaxPrice(): ?int
-	{
-		return $this->maxPrice;
-	}
+    /**
+     * @return int|null
+     */
+    public function getMaxPrice(): ?int
+    {
+        return $this->maxPrice;
+    }
 
-	/**
-	 * @param int|null $maxPrice
-	 * @return PropertySearch
-	 */
-	public function setMaxPrice(int $maxPrice): PropertySearch
-	{
-		$this->maxPrice = $maxPrice;
-		return $this;
-	}
+    /**
+     * @param int|null $maxPrice
+     * @return PropertySearch
+     */
+    public function setMaxPrice(int $maxPrice): PropertySearch
+    {
+        $this->maxPrice = $maxPrice;
+        return $this;
+    }
 
-	/**
-	 * @return int|null
-	 */
-	public function getMinSurface(): ?int
-	{
-		return $this->minSurface;
-	}
+    /**
+     * @return int|null
+     */
+    public function getMinSurface(): ?int
+    {
+        return $this->minSurface;
+    }
 
-	/**
-	 * @param int|null $minSurface
-	 * @return PropertySearch
-	 */
-	public function setMinSurface(int $minSurface): PropertySearch
-	{
-		$this->minSurface = $minSurface;
-		return $this;
-	}
+    /**
+     * @param int|null $minSurface
+     * @return PropertySearch
+     */
+    public function setMinSurface(int $minSurface): PropertySearch
+    {
+        $this->minSurface = $minSurface;
+        return $this;
+    }
 
-	/**
-	 * @return ArrayCollection
-	 */
-	public function getSelections(): ArrayCollection
-	{
-		return $this->selections;
-	}
+    /**
+     * @return ArrayCollection
+     */
+    public function getSelections(): ArrayCollection
+    {
+        return $this->selections;
+    }
 
-	/**
-	 * @param ArrayCollection $selections
-	 */
-	public function setSelections(ArrayCollection $selections): void
-	{
-		$this->selections = $selections;
-	}
+    /**
+     * @param ArrayCollection $selections
+     */
+    public function setSelections(ArrayCollection $selections): void
+    {
+        $this->selections = $selections;
+    }
 
     /**
      * @param int|null $distance

@@ -27,7 +27,7 @@ class ImageCacheSubscriber implements EventSubscriber
         $this->uploaderHelper = $uploaderHelper;
     }
 
-    public function getSubscribedEvents()
+    public function getSubscribedEvents(): array
     {
         return [
             'preRemove',
