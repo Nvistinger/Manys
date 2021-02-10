@@ -51,7 +51,7 @@ class AdminPropertyController extends AbstractController {
         if($form->isSubmitted() && $form->isValid()) {
             $this->em->persist($property);
             $this->em->flush();
-            $this->addFlash('success', 'Votre bien a été créé');
+            $this->addFlash('success', 'Votre bien a été créé.');
             return $this->redirectToRoute('admin.property.index');
         }
         return $this->render('admin/property/new.html.twig', [
@@ -72,7 +72,7 @@ class AdminPropertyController extends AbstractController {
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()) {
             $this->em->flush();
-            $this->addFlash('success', 'Votre bien est modifié');
+            $this->addFlash('success', 'Votre bien a été modifié.');
             return $this->redirectToRoute('admin.property.index');
         }
         return $this->render('admin/property/edit.html.twig', [
@@ -92,7 +92,7 @@ class AdminPropertyController extends AbstractController {
         if ($this->isCsrfTokenValid('delete' . $property->getId(), $request->get('_token'))) {
             $this->em->remove($property);
             $this->em->flush();
-            $this->addFlash('success', 'Votre bien a été supprimé');
+            $this->addFlash('success', 'Votre bien a été supprimé.');
         }
         return $this->redirectToRoute('admin.property.index');
     }

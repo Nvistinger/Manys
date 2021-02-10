@@ -8,11 +8,11 @@
         <h1>Agence immobilière MANYS</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facilis ipsam iusto minus neque obcaecati quas quis sit veritatis? Distinctio.</p>
     </div>
-    <div class="container">
+    <div class="container mt-4">
         <h2>Nos derniers biens</h2>
-        <div class="row flex mt-4">
+        <div class="row mt-4">
             {% for property in properties %}
-                <div class="col-3">
+                <div class="col-md-4">
                     {% include 'property/_property.html.twig' %}
                 </div>
             {% endfor %}
