@@ -22,7 +22,7 @@
                         <a class="nav-link {% if current_menu is defined and current_menu == 'properties' %}active{% endif %}" href="{{ path('property.index') }}">Nos biens</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav dropleft">
+                <ul class="navbar-nav dropdown mr-4">
                     <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration</a>
                     <div class="dropdown-menu">
                         {% if not app.user %}
