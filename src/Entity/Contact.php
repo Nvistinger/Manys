@@ -23,7 +23,7 @@ class Contact
      * @var string|null
      * @Assert\NotBlank()
      * @Assert\Regex(
-     *     pattern="/[0-9]{10}/"
+     *     pattern="/^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$/"
      * )
      */
     private $phone;
