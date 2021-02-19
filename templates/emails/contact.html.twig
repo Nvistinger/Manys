@@ -1,28 +1,29 @@
 <html lang="fr">
-<body>
-    <h1 style="text-align: center;">Prise de contact</h1>
-    <h2 style="text-align: center;">Cette personne souhaiterais obtenir plus d'informations à propos du bien <a href="{{ url('property.show', {id: contact.property.id, slug: contact.property.slug}) }}">{{ contact.property.title }}</a></h2>
-    <table style="margin: 0 auto;">
-        <tr>
-            <td style="font-weight: bold">Prénom:</td>
-            <td>{{ contact.firstname }}</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Nom:</td>
-            <td>{{ contact.lastname }}</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Téléphone:</td>
-            <td>{{ contact.phone }}</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Email:</td>
-            <td>{{ contact.email }}</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold">Message:</td>
-            <td>{{ contact.message | nl2br }}</td>
-        </tr>
-    </table>
-</body>
+    <body style="background-color: #F7F7F9;">
+        <img style="display: block; margin: auto" src="{{ '/images/logo-manys.png' | imagine_filter('thumb')}}" alt="Logo Manys">
+        <h1 style="text-align: center;">Prise de contact</h1>
+        <h2 style="text-align: center;">Cette personne souhaiterais obtenir plus d'informations à propos du bien <a href="{{ url('property.show', {id: contact.property.id, slug: contact.property.slug}) }}">{{ contact.property.title }}</a></h2>
+        <table style="margin: 0 auto;">
+            <tr>
+                <td style="font-weight: bold">Prénom:</td>
+                <td>{{ contact.firstname }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Nom:</td>
+                <td>{{ contact.lastname }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Téléphone:</td>
+                <td>{{ contact.phone }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Email:</td>
+                <td>{{ contact.email }}</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold">Message:</td>
+                <td>{{ contact.message | nl2br }}</td>
+            </tr>
+        </table>
+    </body>
 </html>
