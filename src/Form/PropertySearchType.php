@@ -19,34 +19,25 @@ class PropertySearchType extends AbstractType
         $builder
             ->add('minSurface', IntegerType::class, [
                 'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'Surface minimale'
-                ]
+                'label' => 'Surface minimale',
             ])
             ->add('maxPrice', IntegerType::class, [
                 'required' => false,
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'Budget maximal'
-                ]
+                'label' => 'Budget Maximal',
             ])
             ->add('selections', EntityType::class, [
                 'required' => false,
-                'label' => false,
+                'label' => 'Spécificités',
                 'class' => Selection::class,
                 'choice_label' => 'name',
                 'multiple' => true
             ])
             ->add('address', null, [
-                'label' => false,
+                'label' => 'Adresse',
                 'required' => false,
-                'attr' => [
-                    'placeholder' => 'Adresse'
-                ]
             ])
             ->add('distance', ChoiceType::class, [
-                'label' => false,
+                'label' => 'Distance',
                 'required' => false,
                 'choices' => [
                     '5 km' => 5,
