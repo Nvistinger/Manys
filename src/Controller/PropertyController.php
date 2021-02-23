@@ -32,7 +32,7 @@ class  PropertyController extends AbstractController {
     }
 
     /**
-     * @Route("/biens", name="property.index")
+     * @Route("/catalogue", name="property.index")
      * @param PaginatorInterface $paginator
      * @param Request $request
      * @return Response
@@ -55,7 +55,7 @@ class  PropertyController extends AbstractController {
     }
 
     /**
-     * @Route("/biens/{slug}-{id}", name="property.show", requirements={"slug": "[a-z0-9-]*"})
+     * @Route("/catalogue/{slug}-{id}", name="property.show", requirements={"slug": "[a-z0-9-]*"})
      * @param Property $property
      * @param string $slug
      * @param Request $request
