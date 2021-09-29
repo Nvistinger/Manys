@@ -28,6 +28,8 @@
             <button class="btn btn-primary">Rechercher</button>
             {{ form_end(form) }}
         </div>
+    </div>
+    <div class="container">
         <h1 class="mt-4">Tous nos biens</h1>
         <div class="row mt-4">
             {% for property in properties %}
@@ -36,7 +38,7 @@
                 </div>
             {% endfor %}
         </div>
-        <div class="pagination">
+        <div class="pagination mt-4">
             {{ knp_pagination_render(properties) }}
         </div>
     </div>
