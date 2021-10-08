@@ -1,6 +1,6 @@
 # Manys
 
-![Logo Manys](https://lmpwybb.alwaysdata.net/pictures/manys.png)
+![Logo Manys](https://lmpwybb.alwaysdata.net/pictures/portfolio/manys.png)
 
 ## Fake estate agency
 
