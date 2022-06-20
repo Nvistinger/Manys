@@ -11,7 +11,7 @@ services:
       APP_ENV: dev
       DATABASE_URL: mysql://root:root@mariadb:3306/manys?serverVersion=mariadb-10.8.3
     ports:
-      - "127.0.0.1:8080:80"
+      - "127.0.0.1:8888:80"
     volumes:
       - ./:/var/www
       - ./public:/var/www/html
